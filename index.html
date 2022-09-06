@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+    defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Present Clicker</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <!-- SECTION header -->
+    <section class="row justify-content-center mt-3">
+      <div class="col-12 text-center">
+        <h4>
+          Present Clicker
+        </h4>
+      </div>
+    </section>
+
+  </header>
+  <main class="container-fluid">
+    <!-- SECTION game -->
+    <section class="row">
+      <!-- STUB this will be the game menu -->
+      <div class="col-md-6 order-md-1 order-2 p-3">
+        <!-- STUB CLICKER UPGRADES -->
+        <div class="row upgrade-display justify-content-center">
+          <div class="col-12">
+            <div class="row justify-content-center">
+              <div class="col-12 text-center text-light">
+                <h5>____CLICKER UPGRADES____</h5>
+              </div>
+            </div>
+            <div id="pointer" class="row cursor" onclick="buyClickUpgrade('pointer')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="pointer.png" alt="pointer">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">Pointer</p>
+                  <p>+1</p>
+                </div>
+                <div class="pointer-price text-center py-3">
+                  <p class="mb-1">COST:</p>
+                  <p>50</p>
+                </div>
+                <div class="pointer-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>1/click</p>
+                </div>
+              </div>
+            </div>
+            <div id="goldPointer" class="row cursor" onclick="buyClickUpgrade('goldPointer')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="gold pointer.png" alt="Gold pointer">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">Gold Pointer</p>
+                  <p>+5</p>
+                </div>
+                <div class="goldPointer-price text-center py-3">
+                  <p class="mb-1">COST:</p>
+                  <p>200</p>
+                </div>
+                <div class="goldPointer-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>5/click</p>
+                </div>
+              </div>
+            </div>
+            <div id="goldPickaxe" class="row cursor" onclick="buyClickUpgrade('goldPickaxe')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="gold pickace.png" alt="Gold Pickaxe">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">Gold Pickaxe</p>
+                  <p>+15</p>
+                </div>
+                <div class="goldPickaxe-price text-center py-3">
+                  <p class="mb-1">COST:</p>
+                  <p>500</p>
+                </div>
+                <div class="goldPickaxe-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>15/click</p>
+                </div>
+              </div>
+            </div>
+            <div id="diamondSword" class="row cursor" onclick="buyClickUpgrade('diamondSword')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="diamond pointer.png" alt="Diamond Sword">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">Diamond Sword</p>
+                  <p>+50</p>
+                </div>
+                <div class="diamondSword-price text-center py-3">
+                  <p class=" mb-1">COST:</p>
+                  <p>1250</p>
+                </div>
+                <div class="diamondSword-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>50/click</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- STUB AUTOMATIC UPGRADES -->
+        <div class="row upgrade-display justify-content-center p-3">
+          <div class="col-12">
+            <div class="row p-3 justify-content-center">
+              <div class="col-12 text-center text-light">
+                <h5>____AUTOMATIC CLICK UPGRADES____</h5>
+              </div>
+            </div>
+            <div id='Max' class="row cursor" onclick="buyAutomaticUpgrade('Max')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="Max.png" alt="Max">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="py-3 text-center">
+                  <p class="mb-1">Max</p>
+                  <p>+5</p>
+                </div>
+                <div class="Max-price py-3 text-center">
+                  <p class="mb-1">COST:</p>
+                  <p>300</p>
+                </div>
+                <div class="Max-quantity py-3 text-center">
+                  <p>x0</p>
+                  <p>5/3sec</p>
+                </div>
+              </div>
+            </div>
+            <div id='Sleigh' class="row cursor" onclick="buyAutomaticUpgrade('Sleigh')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="sleigh.png" alt="Sleigh">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="py-3 text-center">
+                  <p class="mb-1">Sleigh</p>
+                  <p>+100</p>
+                </div>
+                <div class="Sleigh-price py-3 text-center">
+                  <p class="mb-1">COST:</p>
+                  <p>750</p>
+                </div>
+                <div class="Sleigh-quantity py-3 text-center">
+                  <p class="mb-1">x0</p>
+                  <p>100/3sec</p>
+                </div>
+              </div>
+            </div>
+            <div id='Bag' class="row cursor" onclick="buyAutomaticUpgrade('Bag')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="Santas Bag.png" alt="Santas Magical Bag">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">Magical Bag</p>
+                  <p>+500</p>
+                </div>
+                <div class="Bag-price text-center py-3">
+                  <p class="mb-1">COST:</p>
+                  <p>2000</p>
+                </div>
+                <div class="Bag-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>500/3sec</p>
+                </div>
+              </div>
+            </div>
+            <div id='Grinch' class="row cursor" onclick="buyAutomaticUpgrade('Grinch')">
+              <div class="col-md-3 d-flex justify-content-center">
+                <img class="img-fluid img" src="grinch.png" alt="Grinch">
+              </div>
+              <div class="col-9 d-flex justify-content-evenly">
+                <div class="text-center py-3">
+                  <p class="mb-1">The Grinch</p>
+                  <p>+1500</p>
+                </div>
+                <div class="Grinch-price text-center py-3">
+                  <p class="mb-1">COST:</p>
+                  <p>5000</p>
+                </div>
+                <div class="Grinch-quantity text-center py-3">
+                  <p class="mb-1">x0</p>
+                  <p>1500/3sec</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- STUB this will be the clicker -->
+      <div class="col-md-6 clicker flex-column text-center order-md-2 order-1 present-display p-3">
+        <div class="row justify-content-around text-light mb-4" id="upgradeCount">
+          <div class="col-5 px-2 py-5 menu-display ">
+            <h5 class="upgradedClick">+1 /perclick</h5>
+          </div>
+          <div class="col-5 px-2 py-5 menu-display ">
+            <h5 class="upgradedAuto">+0 /3sec</h5>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10 ">
+            <div class=" text-light p-5 menu-display" id="clickCount">
+              <h4>CHRISTMAS PRESENTS</h4>
+              <h1 class="count">10000</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 ">
+            <div id="present" onclick="addPresent()" oncontextmenu="return false">
+              <img class="img-fluid" src="present.png" alt="Present">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <!-- SECTION made by me -->
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

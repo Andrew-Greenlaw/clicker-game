@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(219, 199, 173);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 13px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+.clicker {
+  background-image: url("christmas tree.gif");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.cursor {
+  cursor: pointer;
+  border: .3rem solid rgb(41, 134, 255);
+  margin-bottom: .3rem;
+  user-select: none;
+  border-radius: .5rem;
+  background-color: rgb(123, 163, 255);
+}
+
+.cursor:hover {
+  transform: scale(1.01);
+}
+
+.cursor:active {
+  transform: scale(0.99)
+}
+
+.img {
+  height: 8vh;
+}
+
+.menu-display {
+  text-align: center;
+  border-radius: .5rem;
+  background-color: rgb(64, 64, 64);
+  color: whitesmoke;
+  border: .3rem solid rgb(21, 21, 21);
+}
+
+.upgrade-display {
+  border: .3rem solid rgb(21, 21, 21);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgb(64, 64, 64);
+}
+
+.present-display {
+  border: .3rem solid rgb(21, 21, 21);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+#present {
+  cursor: grab;
+}
+
+#present:active {
+  transform: scale(0.85);
+  cursor: grabbing;
+}
+
+p {
+  margin: unset;
+}
